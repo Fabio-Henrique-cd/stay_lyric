@@ -5,14 +5,14 @@ os.environ['PYGAME_HIDDEN_SUPPORT_PROMPT'] = '1'
 import pygame
 import threading
 
-def clear_hide(): # hide cursor and windows path
+def clear_hide():
     if __name__ == "__main__":
         os.system('cls')
     print("\033[?25l", end="")
 
 clear_hide()
 
-def play_music(): # play music and select what time as started
+def play_music():
     pygame.init()
     pygame.mixer.init()
     pygame.mixer.music.load('music.mp3')
@@ -24,7 +24,7 @@ threading.Thread(target=play_music).start()
 
 init(convert=True, autoreset=True)
 
-def music_lyric(): 
+def music_lyric():
     lyrics = [
         (" ", 0, True),
         ("When I'm away from you, I miss your touch", 0.06, True),
